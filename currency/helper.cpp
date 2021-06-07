@@ -66,24 +66,18 @@ QString Helper::parseOneItem(QXmlStreamReader &xml){
 QStringList Helper::get_xml(QString &line){
     get_url(line);
     QStringList ans;
-    QSignalSpy spy(this, &Helper::ready);
-//    spy.wait(5000);
     ans = Helper::values;
     return ans;
 }
 
 void Helper::get_url(QString &line){
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-//    QSignalSpy spy (manager,&QNetworkAccessManager::finished);
     connect(manager, &QNetworkAccessManager::finished, this, &Helper::finished);
     QNetworkRequest r(QUrl(line.toUtf8()));
     manager->get(r);
-//    spy.wait(10000);
-//    emit Helper::ready();
 }
 
 void Helper::finished(QNetworkReply *reply){
     QXmlStreamReader xml(reply);
     Helper::values = parseXml(xml);
-    emit Helper::ready();
 }

@@ -18,7 +18,7 @@ public:
     QStringList values;
 
 signals:
-    void ready();
+
 public slots:
      QString parseOneItem(QXmlStreamReader &xml);
      void get_url(QString &line);
