@@ -1,5 +1,6 @@
 language:
   - cpp
+compiler: g++
 
 before_install:
   - pip install --user cpp-coveralls
@@ -8,6 +9,7 @@ addons:
   sonarcloud:
     organization: "nikbelen"
     token: $SONAR_TOKEN
+
 
 
 script:
