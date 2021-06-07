@@ -15,12 +15,12 @@ CONFIG += c++11
 
 
 
-QMAKE_CXXFLAGS += -Wall -Wextra #-Werror
-QMAKE_CFLAGS += -Wall -Wextra #-Werror
+QMAKE_CXXFLAGS += -Wall -Wextra -std=c++11 #-Werror
+QMAKE_CFLAGS += -Wall -Wextra -std=c++11 #-Werror
 
 # gcov
-QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage -std=c++11
-QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage -std=c++11
+QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
+QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
 DEFINES += INPUTDIR=\\\"$$PWD/input/\\\"
