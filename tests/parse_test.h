@@ -40,7 +40,7 @@ TEST (parse_xml,not_valid_xml)
     QString line;
     line = TestValues.at(0);
     QString ans = "";
-    ASSERT_EQ(TestValues.length(),0);
+    ASSERT_EQ(TestValues.length(),1);
     ASSERT_STREQ(ans.toStdString().c_str(),line.toStdString().c_str());
 }
 
