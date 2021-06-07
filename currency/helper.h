@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QVector>
+#include <QStringList>
 #include <QXmlStreamReader>
 #include <QNetworkAccessManager>
 #include <QtNetwork/QNetworkAccessManager>
