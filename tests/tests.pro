@@ -32,4 +32,4 @@ SOURCES +=     main.cpp \
     ../currency/helper.cpp
 
 
-INCLUDEPATH += ../app
+INCLUDEPATH += ../currency

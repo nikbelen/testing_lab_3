@@ -22,10 +22,7 @@ signals:
 
 public slots:
      QString parseOneItem(QXmlStreamReader &xml);
-     void get_url(QString &line);
-     void finished(QNetworkReply *reply);
      QStringList parseXml(QXmlStreamReader &xml);
-     QStringList get_xml(QString &line);
 
 };
 

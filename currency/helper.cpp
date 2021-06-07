@@ -6,6 +6,7 @@
 #include <QString>
 
 
+
 Helper::Helper(QObject *parent) : QObject(parent)
 {
 
@@ -61,23 +62,4 @@ QString Helper::parseOneItem(QXmlStreamReader &xml){
         xml.readNext();
     }
     return s;
-}
-
-QStringList Helper::get_xml(QString &line){
-    get_url(line);
-    QStringList ans;
-    ans = Helper::values;
-    return ans;
-}
-
-void Helper::get_url(QString &line){
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    connect(manager, &QNetworkAccessManager::finished, this, &Helper::finished);
-    QNetworkRequest r(QUrl(line.toUtf8()));
-    manager->get(r);
-}
-
-void Helper::finished(QNetworkReply *reply){
-    QXmlStreamReader xml(reply);
-    Helper::values = parseXml(xml);
 }
