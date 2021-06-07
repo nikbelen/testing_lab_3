@@ -26,15 +26,10 @@ DEFINES += INPUTDIR=\\\"$$PWD/input/\\\"
 
 HEADERS += parse_test.h \
         ../currency/helper.h \
-        ../currency/mainwindow.h \
 
 
 SOURCES +=     main.cpp \
-    ../currency/mainwindow.cpp \
     ../currency/helper.cpp
-
-FORMS += \
-    ../currency/mainwindow.ui
 
 
 INCLUDEPATH += ../app

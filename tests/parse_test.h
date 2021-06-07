@@ -23,7 +23,9 @@ TEST (parse_xml,valid_xml)
     QString line;
     line = TestValues.at(0);
     QString ans = "(AUD) за 1 Австралийский доллар вы заплатите 21,3659 рублей";
+    ASSERT_EQ(TestValues.length(),18);
     ASSERT_STREQ(ans.toStdString().c_str(),line.toStdString().c_str());
+
 }
 
 TEST (parse_xml,not_valid_xml)
@@ -39,6 +41,7 @@ TEST (parse_xml,not_valid_xml)
     QString line;
     line = TestValues.at(0);
     QString ans = "";
+    ASSERT_EQ(TestValues.length(),0);
     ASSERT_STREQ(ans.toStdString().c_str(),line.toStdString().c_str());
 }
 
