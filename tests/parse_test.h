@@ -7,7 +7,6 @@
 #include <QSignalSpy>
 #include <iostream>
 
-#include "../currency/mainwindow.h"
 #include "../currency/helper.h"
 
 TEST (parse_xml,valid_xml)
